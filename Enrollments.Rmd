@@ -1,0 +1,32 @@
+---
+title: "Enrollment"
+author: "Saiyaz Kazi"
+date: "10/15/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(knitr)
+library(stringr)
+library(janitor)
+library(readxl)
+```
+
+```{r}
+e_18 <- read_excel("copy_of_class_enrollment_summary_by_term_10.06.2016.xlsx", range = "A4:N2760") %>% 
+  clean_names()
+e_17 <- read_excel("class_enrollment_summary_by_term_10_12.xlsx", range = "A4:N2794") %>% 
+  clean_names()
+e_16 <- read_excel("class_enrollment_summary_by_term_10.20.17 (2).xlsx", range = "A4:N2731") %>% 
+  clean_names()
+e_15 <- read_excel ("CourseEnrollmentStatistics.xlsx") %>% 
+  clean_names()
+
+
+## Can use read_excel which combs through all read functions
+## Command Option P runs all code above it
+```
+
